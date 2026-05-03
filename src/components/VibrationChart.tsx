@@ -39,7 +39,7 @@ export default function VibrationChart() {
   // We start by showing the first 8 real data points
   const [visibleData, setVisibleData] = useState(REAL_SOC_DATA.slice(0, 8))
   // This index tracks which point we'll add next
-  const [index, setIndex] = useState(8)
+  const [_index, setIndex] = useState(8)
 
   useEffect(() => {
     // Every 2 seconds, add the next real data point and drop the oldest
