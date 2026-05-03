@@ -1,0 +1,14 @@
+/* Tailwind's three layers — base resets, component classes, utility classes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Pulsing animation for the "Live" green dot in the header */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.4); }
+}
+
+.live-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
