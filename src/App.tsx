@@ -18,21 +18,18 @@ const statCards = [
     value: '87%',
     badge: 'Good',
     badgeColor: 'bg-green-100 text-green-700',
-    icon: '🔋',
   },
   {
     label: 'Vibration Status',
     value: 'Normal',
     badge: 'Normal',
     badgeColor: 'bg-green-100 text-green-700',
-    icon: '📈',
   },
   {
     label: 'Last Scan',
     value: '2 min ago',
     badge: 'Live',
     badgeColor: 'bg-blue-100 text-blue-700',
-    icon: '🕐',
   },
 ]
 
@@ -57,21 +54,17 @@ export default function App() {
 
         {/* ── STAT CARDS ROW ── */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {statCards.map((card) => (
-            <div key={card.label} className="bg-white rounded-xl shadow p-5 flex items-center gap-4">
-              {/* Icon circle */}
-              <div className="text-2xl w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
-                {card.icon}
-              </div>
-              <div>
-                <p className="text-xs text-gray-500 uppercase tracking-wide">{card.label}</p>
-                <p className="text-2xl font-bold text-gray-800 leading-tight">{card.value}</p>
-                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${card.badgeColor}`}>
-                  {card.badge}
-                </span>
-              </div>
+        {statCards.map((card) => (
+          <div key={card.label} className="bg-white rounded-xl shadow p-5 flex items-center gap-4">
+            <div>
+              <p className="text-xs text-gray-500 uppercase tracking-wide">{card.label}</p>
+              <p className="text-2xl font-bold text-gray-800 leading-tight">{card.value}</p>
+              <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${card.badgeColor}`}>
+                {card.badge}
+              </span>
             </div>
-          ))}
+          </div>
+        ))}
         </div>
 
         {/* ── LIVE VIBRATION CHART ── */}
