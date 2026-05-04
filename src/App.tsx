@@ -42,23 +42,13 @@ export default function App() {
     <div className="min-h-screen bg-gray-50 flex flex-col">
 
       {/* ── HEADER ── */}
-      <header style={{ backgroundColor: '#1e3a5f' }} className="px-6 py-4 flex items-center justify-between">
-        {/* Left side: app name + live indicator */}
-        <div className="flex items-center gap-3">
-          <h1 className="text-white text-xl font-bold tracking-tight">
-            EVident Sensor Dashboard
-          </h1>
-          {/* Pulsing green dot — animation defined in index.css */}
-          <div className="flex items-center gap-1.5">
-            <span className="live-dot inline-block w-2.5 h-2.5 rounded-full bg-green-400" />
-            <span className="text-green-300 text-sm font-medium">Live</span>
-          </div>
-        </div>
-
-        {/* Right side: date and attribution */}
-        <div className="text-right">
-          <p className="text-blue-200 text-sm">{getTodayDate()}</p>
-          <p className="text-blue-300 text-xs mt-0.5">Built by Pawan Kumar | Portfolio Demo</p>
+      <header style={{ backgroundColor: '#1e3a5f' }} className="px-6 py-4 flex items-center justify-center gap-3">
+        <h1 className="text-white text-xl font-bold tracking-tight">
+          EVident Sensor Dashboard
+        </h1>
+        <div className="flex items-center gap-1.5">
+          <span className="live-dot inline-block w-2.5 h-2.5 rounded-full bg-green-400" />
+          <span className="text-green-300 text-sm font-medium">Live</span>
         </div>
       </header>
 
@@ -97,9 +87,7 @@ export default function App() {
       </main>
 
       {/* ── FOOTER ── */}
-      <footer className="text-center text-xs text-gray-400 py-4 border-t border-gray-200 px-4">
-        Demo project built by Pawan Kumar to showcase frontend skills for EVident Battery internship | UIC Computer Science
-      </footer>
+
 
     </div>
   )
